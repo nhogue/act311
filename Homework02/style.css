@@ -15,3 +15,7 @@
   width: 100px;
   height: 250px;
 }
+.gridPics {
+  max-height: 300px;
+  max-width: 300px;
+}

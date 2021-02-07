@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fixh1(){
+            let top = document.getElementById("top");
+            console.log("Top is " + top.innerHTML);
+
+            //first Method (somewhat aggressive use of objects)
+            if(new Date().getHours() < 12){
+                document.getElementById("top").innerHTML="Good Morning";
+            }else{
+                document.getElementById("top").innerHTML="Good Evening";
+            }
+
+            //second method (safer and easier to debug)
+            let whence = document.getElementById("top");
+            console.log(whence);
+            let hours = new Date().getHours();
+            console.log("The hours are " + hours);
+            let message = ""
+            if(hours < 12){
+                message = "Good morning";
+            }else{
+                message = "Good evening";
+            }
+            whence.innerHTML = message;
+
+            //Third method for the criminally insane coder
+
+            document.getElementById("top").innerHTML = (new Date().getHours()<12)?"good morning":"good evening";
+
+            inside();
+                
+        }
+        function inside(){
+            let whence = document.getElementById("gibberish");
+            console.log (whence.innerHTML);
+            console.log(whence.style);
+            whence.style.color = "red";
+        }
+        function outside(){
+             let whence = document.getElementById("gibberish");
+             whence.style.color= "black";
+        }
+
+        function double(){
+            let whence = document.getElementById("fred");
+            let contents=whence.value;
+            contents = parseFloat(contents);
+            console.log("Contents are "+contents);
+            let doubled = contents+contents;
+            document.getElementById("results").innerHTML=doubled;
+
+        }
+
+    </script>
+</head>
+<body>
+    
+    <h1 id="top">Hello</h1>
+    <div id="gibberish" onMouseOver="inside()" onMouseOut="outside()">
+        <p>Off my the fact and each he. Entrance that the god above perched said ease. The nevermore this truly entreating.</p>
+        <p>Diam clita sed et amet diam ut clita. Amet clita.</p>
+    </div>
+    <p><input type="number" id="fred" onchange="double()"></p>
+    <p><button onclick="fixh1()">I am button</button></p>
+    <p>The doubled contents are <span id="results">???</span></p>
+    
+</body>
+</html>
