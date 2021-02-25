@@ -6,73 +6,53 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="fetch.js">
     </script>
-    <title>Homework04</title>
+    <style>
+        #doggo{
+            width: 100%;
+            max-width: 600px;
+            max-height: 1000px;
+        }
+    </style>
+    <title>Homework05</title>
     </head>
-    <body class="bg-light"  onload="randoDoggo('https://dog.ceo/api/breeds/image/random')">
-        <div class="container">
-            <div class="row align-items-stretch">
-                <div class="col">
-                    One of four columns
+    <body class="bg-secondary" onload="randoDoggo('https://dog.ceo/api/breeds/image/random')">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col border text-center">
+                    <p>Gender Predictor</p>
+                    <p>Input a name and see if it's male or female!</p>
+                    <input id="fname" onchange="genderize()">
+                    <input id="result" readonly>
+                    <p>(Note: Results may vary!)</p>
                 </div>
                 <div class="col">
-                    Two of four columns
+                    <p>&nbsp;</p>
                 </div>
                 <div class="col">
-                    Three of four columns
+                    <p>&nbsp;</p>
                 </div>
-                <div class="col">
-                    Four of four columns
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row align-items-stretch">
-                <div class="col">
-                    One of four columns
-                </div>
-                <div class="col">
-                    Two of four columns
-                </div>
-                <div class="col">
-                    Three of four columns
-                </div>
-                <div class="col">
-                    <img id="doggo" src="">
-                    Random Doggo!
+                <div class="col border text-center">
+                    <img id="doggo"  src="">
+                    <p>Random Doggo!</p>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row align-items-stretch">
                 <div class="col">
-                    One of four columns
+                    
                 </div>
                 <div class="col">
-                    Two of four columns
+                    <p>&nbsp;</p>
                 </div>
                 <div class="col">
-                    Three of four columns
+                    <p>&nbsp;</p>
                 </div>
                 <div class="col">
-                    Four of four columns
+                    <p>&nbsp;</p>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row align-items-stretch">
-                <div class="col">
-                    One of four columns
-                </div>
-                <div class="col">
-                    Two of four columns
-                </div>
-                <div class="col">
-                    Three of four columns
-                </div>
-                <div class="col">
-                    Four of four columns
-                </div>
-            </div>
         </div>
     </body>
 </html>
