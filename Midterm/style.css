@@ -1,0 +1,17 @@
+body {
+  color: #060606;
+  margin: 1em;
+  margin-background-image: url("GRIFFON.png");
+}
+
+h1 {
+  color: #e6bd21;
+  background-color: #060606;
+}
+
+h2 {
+  color: #060606;
+  background-color: #e6bd21;
+}
+
+/*# sourceMappingURL=style.css.map */
