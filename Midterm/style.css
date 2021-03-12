@@ -1,17 +1,19 @@
-body {
-  color: #060606;
-  margin: 1em;
-  margin-background-image: url("GRIFFON.png");
+.theBody {
+  background-image: url("GRIFFON.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  resize: both;
+  overflow: scroll;
 }
 
-h1 {
-  color: #e6bd21;
-  background-color: #060606;
-}
-
-h2 {
-  color: #060606;
-  background-color: #e6bd21;
+select {
+  text-align-last: center;
+  direction: rlt;
 }
 
 /*# sourceMappingURL=style.css.map */

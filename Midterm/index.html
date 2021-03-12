@@ -8,15 +8,22 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <title>Midterm</title>
     </head>
-    <body onload="instructors()">
+    <body onload="departments(); instructors();" class="theBody">
+        <h1 class="text-light text-center">MWSU Class Lookup</h1>
         <script src="Teachers.js"></script>
-        <p>Status: <span id="status" class="text-primary bg-white">Nothing Yet</span></p>
-        <label for="teachers">Select a professor: </label>
-        <select id="InstructorSelect" onchange="TeacherSelection(this)">
-            <option>Pick one</option>
+        <p class="text-center">Status: <span id="status" class="text-primary">Nothing Yet</span></p>
+        <label for="departments" class="text-center">Select a department: </label>
+        <select id="DepartmentSelect" onchange="DepartmentSelection(this)">
+            <option class="text-center">Pick one</option>
         </select>
-        <ul id="theList">
-            
-        </ul>
+        <label for="teachers" class="text-center">Select a professor: </label>
+        <select id="InstructorSelect" onchange="TeacherSelection(this)">
+            <option class="text-center">Pick one</option>
+        </select>
+        <div class="container" id="theList">
+            <div class="row align-items-center">
+                
+            </div>
+        </div>
     </body>
 </html>
