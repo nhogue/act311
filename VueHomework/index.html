@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Vue Course Lists</title>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+        <!-- Import Styles -->
+        <link rel="stylesheet" href="./styles.css" />
+        <!-- Import Vue.js -->
+        <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+        <style>
+            #appArea {
+                background-color: lightgoldenrodyellow;
+            }
+            .center {
+                text-align: center;
+            }
+            table,
+            tr,
+            td,
+            th {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="appArea">
+            <table>
+                <tr>
+                    <th>Course</th>
+                    <th>CRN</th>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Times</th>
+                    <th>Days</th>
+                    <th>Course Date</th>
+                    <th>Instructor</th>
+                    <th>Course Description</th>
+                    <th>Course Enrollment</th>
+                    <th>Message</th>
+                    <th>Term</th>
+                    <th>Hours</th>
+                    <th>Room</th>
+                    <th>Section</th>
+                </tr>
+                <tr v-for="co of courses">
+                    <td class="center">{{ co.course }}</td>
+                    <td class="center">{{ co.crn }}</td>
+                    <td class="center">{{ co.title }}</td>
+                    <td class="center">{{ co.type }}</td>
+                    <td class="center">{{ co.times }}</td>
+                    <td class="center">{{ co.days }}</td>
+                    <td class="center">{{ co.course_dates }}</td>
+                    <td class="center">{{ co.instructor }}</td>
+                    <td class="center">{{ co.course_description }}</td>
+                    <td class="center">{{ co.course_enrollment }}</td>
+                    <td class="center">{{ co.course_message }}</td>
+                    <td class="center">{{ co.course_term }}</td>
+                    <td class="center">{{ co.hours }}</td>
+                    <td class="center">{{ co.room }}</td>
+                    <td class="center">{{ co.sec }}</td>
+                </tr>
+            </table>
+        </div>
+        <footer>
+            <p>Property of Missouri Western State University</p>
+        </footer>
+        <script src="./app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+        crossorigin="anonymous">
+        <title>Midterm</title>
+    </head>
+    <body onload="departments();" class="theBody">
+        <h1 class="text-light text-center">MWSU Class Lookup</h1>
+        <script src="Teachers.js"></script>
+        <p class="text-center">Status: <span id="status" class="text-primary">Nothing Yet</span></p>
+        <label for="departments" class="text-center">Select a department: </label>
+        <select id="DepartmentSelect" onchange="DepartmentSelection(this)">
+            <option class="text-center">Pick one</option>
+        </select>
+        <label for="teachers" class="text-center">Select a professor: </label>
+        <select id="InstructorSelect" onchange="TeacherSelection(this)">
+            <option class="text-center">Pick one</option>
+        </select>
+        <div class="container" id="theList">
+            <div class="row align-items-center">
+
+            </div>
+        </div>
+    </body>
+</html>
