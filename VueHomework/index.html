@@ -7,27 +7,16 @@
         <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
         <!-- Import Styles -->
-        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="./style.css" />
         <!-- Import Vue.js -->
         <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
-        <style>
-            #appArea {
-                background-color: lightgoldenrodyellow;
-            }
-            .center {
-                text-align: center;
-            }
-            table,
-            tr,
-            td,
-            th {
-                border: 1px solid black;
-                border-collapse: collapse;
-            }
-        </style>
     </head>
     <body>
         <div id="appArea">
+            <div>
+                <label class="center">Type a class:</label>
+                <input class="center" type="text" v-model="picked">
+            </div>
             <table>
                 <tr>
                     <th>Course</th>
@@ -46,7 +35,7 @@
                     <th>Room</th>
                     <th>Section</th>
                 </tr>
-                <tr v-for="co of courses">
+                <tr v-for="co of byName">
                     <td class="center">{{ co.course }}</td>
                     <td class="center">{{ co.crn }}</td>
                     <td class="center">{{ co.title }}</td>

@@ -3,10 +3,15 @@ const app = Vue.createApp({
     data: function () {
         return {
             courses: [],
-            picked: "Contemporary Problem Solving",
+            picked: "ACT102",
         };
         },
         methods: {
+        },
+        computed: {
+            byName: function() {
+                return this.courses.filter( name => name.course.includes(this.picked));
+            }
         },
         mounted() {
             fetch('https://raw.githubusercontent.com/nhogue/act311/main/CSMP.json')
