@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Vue Course Lists</title>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+        <!-- Import Styles -->
+        <link rel="stylesheet" href="./style.css" />
+        <!-- Import Vue.js -->
+        <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+    </head>
+    <body>
+        <div id="appArea">
+            <div>
+                <label class="center">Type a course:</label>
+                <input class="center" type="text" v-model="picked">
+                &nbsp;
+                <select v-model="selectedD">
+                    <option disabled value="">Please select a department</option>
+                    <option v-for="de of departments">{{ de.departmentName }}</option>
+                </select>
+                &nbsp;
+                <select v-model="selectedS">
+                    <option disabled value="">Please select a subject</option>
+                    <option v-for="su of subjects">{{ su.subjectName }}</option>
+                </select>
+                &nbsp;
+                <button v-on:click="searchInput">Submit</button>
+            </div>
+            <div v-show="hideTable">
+            <table>
+                <tr>
+                    <th>Course</th>
+                    <th>CRN</th>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Times</th>
+                    <th>Days</th>
+                    <th>Course Date</th>
+                    <th>Instructor</th>
+                    <th>Course Description</th>
+                    <th>Course Enrollment</th>
+                    <th>Message</th>
+                    <th>Term</th>
+                    <th>Hours</th>
+                    <th>Room</th>
+                    <th>Section</th>
+                </tr>
+                <tr v-for="co of courses">
+                    <td class="center">{{ co.course }}</td>
+                    <td class="center">{{ co.crn }}</td>
+                    <td class="center">{{ co.title }}</td>
+                    <td class="center">{{ co.type }}</td>
+                    <td class="center">{{ co.times }}</td>
+                    <td class="center">{{ co.days }}</td>
+                    <td class="center">{{ co.courseBegin }}<br>{{ co.courseEnd }}</td>
+                    <td class="center">{{ co.instructor }}</td>
+                    <td class="center">{{ co.courseDesc }}</td>
+                    <td class="center">{{ co.courseSeats }}</td>
+                    <td class="center">{{ co.courseMess }}</td>
+                    <td class="center">{{ co.courseTerm }}</td>
+                    <td class="center">{{ co.hours }}</td>
+                    <td class="center">{{ co.rooms }}</td>
+                    <td class="center">{{ co.sec }}</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+        <footer>
+            <p>Property of Missouri Western State University</p>
+        </footer>
+        <script src="./app.js"></script>
+    </body>
+</html>
